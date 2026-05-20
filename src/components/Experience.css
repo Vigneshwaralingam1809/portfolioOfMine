@@ -1,0 +1,134 @@
+.experience-section {
+  position: relative;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Timeline Line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20px;
+  height: 100%;
+  width: 2px;
+  background: var(--glass-border);
+}
+
+@media (min-width: 768px) {
+  .timeline::before {
+    left: 40px;
+  }
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .timeline-item {
+    padding-left: 90px;
+  }
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 2px solid var(--accent-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--accent-primary);
+  box-shadow: 0 0 15px var(--accent-glow);
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .timeline-dot {
+    left: 20px;
+  }
+}
+
+.timeline-content {
+  position: relative;
+}
+
+.timeline-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+@media (min-width: 768px) {
+  .timeline-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.timeline-header h3 {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.timeline-header h4 {
+  font-size: 1.1rem;
+  color: var(--accent-primary);
+  font-weight: 500;
+}
+
+.timeline-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.timeline-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.timeline-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.timeline-list li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary);
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
